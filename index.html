@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+
+    <div id="product-container"></div>
+    <div id="wishlist">
+      <h3>wishlist</h3>
+    </div>
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <script src="products-data.js"></script>
+    <script type="text/x-handlebars-template" id="HBtemplate">
+    
+      <div id="product">
+        <h3>{{title}}</h3>
+        <p>{{cost}}</p>
+        <img src="{{image}}"></img>
+        <button type='button' id='addToList'>Add Item to wishlist</button>
+      </div>
+    </script>
+
+    <script type="text/x-handlebars-template" id="wishTemplate">
+        
+          <li>
+            <h5>{{title}}</h5><button id='remove'>Remove</button>
+          </li>
+
+    </script>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
